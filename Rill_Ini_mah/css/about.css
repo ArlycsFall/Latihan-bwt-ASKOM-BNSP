@@ -1,0 +1,106 @@
+:root{
+/* CSS HEX */
+    --offWhite: #E8E8F0;
+    --white: #FFFFFF;
+    /* 	Background, teks di atas gelap */
+    --black: #000000;
+    /* Teks utama, kontras tinggi */
+    --gray-light: #F5F5F5;
+    /* Background alternatif, card */
+    --gray: #AAAAAA;
+    /* Teks sekunder, border, placeholder */
+    --sky-blue: #96C7EB;
+    /* Aksen lembut, link, highlight */
+    --electric-indigo: #5E17EB;
+    /* Warna utama (primary) — berani, modern */
+    --yale-blue: #054B71;
+    /* Warna gelap untuk footer, sidebar, tombol sekunder */
+    --strawberry-red: #FB383B;
+    /* Call to action, error, peringatan, notifikasi */
+    --gunmetal: #3C3C3C;
+    /* 	Alternatif hitam yang lebih lembut, teks di atas background terang */
+    --lightdark:#1e1e1ebf;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --transisi: 0.3s ease;
+
+--Syne:'Syne', sans-serif;
+--TASA-Orbiter:'TASA Orbiter', sans-serif;
+--Montserrat: 'Montserrat', sans-serif;
+}
+/* kuhisusu page about */
+
+.page-hero{
+    padding: 80px 0 40px;
+    border-bottom: 1px var(--gray);
+}
+
+.about{padding:  80px 0;}
+
+.about-layout{
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.about-photo{
+    flex-shrink: 0;
+    width: 320px;
+}
+
+.about-photo img{
+    width: 100%;
+    border-radius: var(--radius-md);
+    border: 1px solid bar var(--yale-blue);
+}
+
+.about-content{flex: 1;}
+
+.about-content h1{
+    font-family: var(--Syne);
+    font-size: 28px;
+    font-weight: 700px;
+    margin-bottom: 16px;
+}
+
+.about-content p{
+    color: var(--gray);
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+/* table data dari */
+.about-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+.about-table tr{
+    border-bottom: 1px solid var(--gunmetal);
+}
+
+.about-table td{
+    padding: 12px 0;
+}
+
+.about-table .label{
+    color: var(--sky-blue);
+    width: 120px;
+}
+
+/* responive */
+@media (max-width: 768px){
+    .about-layout{
+        flex-direction: column;
+    }
+    .about-photo{
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,123 @@
+/* ======================================
+responsice . css
+konsep yang dipalajjeri?
+    -media query(@media)
+    -mobilefirst approach
+    mengubah layout grid/flex di layat kecil
+======================================= */
+
+/* tablet (maximal 900px) */
+
+:root{
+/* CSS HEX */
+    --offWhite: #E8E8F0;
+    --white: #FFFFFF;
+    /* 	Background, teks di atas gelap */
+    --black: #000000;
+    /* Teks utama, kontras tinggi */
+    --gray-light: #F5F5F5;
+    /* Background alternatif, card */
+    --gray: #AAAAAA;
+    /* Teks sekunder, border, placeholder */
+    --sky-blue: #96C7EB;
+    /* Aksen lembut, link, highlight */
+    --electric-indigo: #5E17EB;
+    /* Warna utama (primary) — berani, modern */
+    --yale-blue: #054B71;
+    /* Warna gelap untuk footer, sidebar, tombol sekunder */
+    --strawberry-red: #FB383B;
+    /* Call to action, error, peringatan, notifikasi */
+    --gunmetal: #3C3C3C;
+    /* 	Alternatif hitam yang lebih lembut, teks di atas background terang */
+    --lightdark:#1e1e1ebf;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --transisi: 0.3s ease;
+
+--Syne:'Syne', sans-serif;
+--TASA-Orbiter:'TASA Orbiter', sans-serif;
+--Montserrat: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 900px){
+    .hero-inner{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-desc{
+        margin-left: auto; 
+        margin-right: auto;
+    }
+
+    .hero-actions{
+        justify-content: center;
+    }
+/* Memperkecil avatar */
+    .avatar-wrap{
+        width: 200px;
+        height: 200px;
+    }
+
+    /* footer dari 3 kolom jadi 2 kolom */
+    .footer-inner{
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-brand{
+        grid-column: 1/ -1; /* span semua kolom */
+    }
+}
+
+/* mobile max 600px */
+@media (max-width: 600px){
+
+    /* navbar: hamburger muncul, nav links disembunyikan */
+    .nav-toggle{
+        display: flex;
+    }
+
+    .site-nav{
+        display: none; /* Nav sembunyi secara default */
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right:0;
+        background: var(--yale-blue);
+        flex-direction: column; /*link tersusun vertical*/
+        align-items: flex-start;
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--gunmetal);
+        gap: 4px;
+    }
+
+    /* class .is-open ditambahkan via Js */
+    .site-nav.is-open {display: flex;}
+
+    .nav-link{
+        width: 100%;
+        padding: 10px 0;
+        border-bottom:  1px solid  var(--gunmetal);
+    }
+
+    .nav-link:last-child{border-bottom: none;}
+
+    /* paddging menjadi m=lebih kecil */
+    .hero {padding: 60px 0 40px;}
+    
+    /* random:dadari 3 kolom jadi 1 kolom */
+    .random-grid{grid-template-columns: 1fr;}
+
+    /* cta dari row jadi column */
+    .cta-inner{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* footer jadi 1 kolom semua */
+    .footer-inner{
+        grid-template-columns:  1fr;
+    }
+}

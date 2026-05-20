@@ -1,0 +1,492 @@
+
+/* variabel katanya */
+:root{
+/* CSS HEX */
+    --offWhite: #E8E8F0;
+    --white: #FFFFFF;
+    /* 	Background, teks di atas gelap */
+    --black: #000000;
+    /* Teks utama, kontras tinggi */
+    --gray-light: #F5F5F5;
+    /* Background alternatif, card */
+    --gray: #AAAAAA;
+    /* Teks sekunder, border, placeholder */
+    --sky-blue: #96C7EB;
+    /* Aksen lembut, link, highlight */
+    --electric-indigo: #5E17EB;
+    /* Warna utama (primary) — berani, modern */
+    --yale-blue: #054B71;
+    /* Warna gelap untuk footer, sidebar, tombol sekunder */
+    --strawberry-red: #FB383B;
+    /* Call to action, error, peringatan, notifikasi */
+    --gunmetal: #3C3C3C;
+    /* 	Alternatif hitam yang lebih lembut, teks di atas background terang */
+    --lightdark:#1e1e1ebf;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --transisi: 0.3s ease;
+
+--Syne:'Syne', sans-serif;
+--TASA-Orbiter:'TASA Orbiter', sans-serif;
+--Montserrat: 'Montserrat', sans-serif;
+}
+
+
+/* Reset & base */
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {scroll-behavior: smooth;}
+
+body{
+    background-color: var(--black);
+    font-family: var(--TASA-Orbiter);
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{list-style: none;}
+
+/* Utility (utility apaan?) */
+.container{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* buttonzz */
+.btn{
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: var(--radius-sm);
+    font-family: var(--Montserrat);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transisi);
+    border: 1.5px solid transparent;
+}
+
+.btn-primary{
+    background:var(--sky-blue);
+    color: var(--black);
+    border-color: var(--sky-blue);
+}
+
+.btn-primary:hover{
+    background: transparent;
+    color: var(--sky-blue);
+}
+
+.btn-secondary{
+    background: transparent;
+    color:var(--offWhite);
+    border-color: var(--offWhite);
+}
+.btn-secondary:hover{
+    color:var(--strawberry-red);
+    border-color: var(--strawberry-red);
+}
+
+.btn-outline{
+    background: transparent;
+    color: var(--yale-blue);
+    border-color: var(--yale-blue);
+}
+
+.btn-outline:hover{
+    color: var(--electric-indigo);
+    border-color: var(--electric-indigo);
+}
+
+.btn-sm{
+    padding: 8px 18px;
+    font-size: 13px;
+    background:var(--strawberry-red);
+    color: var(--lightdark);
+    border-radius: var(--radius-sm);
+}
+
+/* Header & Navbar  
+flexbox horizontal logo kiri nav kanan*/
+
+.site-header{
+    position: sticky;/* MENEMPEL SAAT DI SCROLL */
+    top: 0;
+    z-index: 100;
+    background:rgba(15, 15, 15, 0.75);/* var(--gunmetal);var(--white); */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gunmetal);
+}
+
+.header-inner{
+    display: flex;/*flexbox= elemen berjejer scr horixontal ---*/
+    align-items: center;/*Rata tengah secara vertical*/
+    justify-content: space-between;/*membuat logo ad adi kiri dan nav di kanan*/
+    height: 64px;
+}
+
+/* LOGO */
+.logo{
+    width: 46px;
+    border-radius: 50px;
+    /* padding-bottom: 12px;     */
+}  
+
+/* NAV */
+.site-nav{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link{
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    color: var(--gray);
+    transition: color var(--transisi);
+}
+
+.nav-link:hover, 
+.nav-link.active{color: var(--offWhite);}
+
+.nav-cta{
+    background-color: var(--sky-blue);/* color: #3C3C3C !important; */
+    color: var(--lightdark);
+    font-weight: 500;
+}
+
+.nav-cta:hover{
+    background-color: #5E17EB;
+}
+
+/* HmmmmmBUrgahhh(hidden as default on dekstop) */
+.nav-toggle{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-toggle span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: var(--transisi);
+}
+
+/* HERO */
+.hero{
+    padding: 100px 0 80px;
+}
+
+.hero-inner{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+
+.hero-text{flex: 1;}
+
+.hero-tag{
+    display: inline-block;
+    font-size: 13px;
+    color: var(--sky-blue);
+    border: 1px solid var(--sky-blue);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5;
+}
+
+.hero-title{
+    font-family: var(--Syne);
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-name{
+    color: var(--strawberry-red);
+    display: block;
+}
+
+.hero-desc{
+    color: var(--gray-light);
+    font-size: 16px;
+    max-width: 460px;
+    margin-bottom: 36px;
+}
+
+.hero-actions{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.avatar-wrap{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 2px solid var(--yale-blue);
+    overflow: hidden;
+    position: relative;
+    transition: 2s;
+    
+}
+
+
+/* iseng inimah wwwwwkwkwkwk */
+.avatar-wrap:active{
+    rotate: 360000deg;
+    transition: 2s;
+     width: 99999px;
+    height: 99999px;
+}
+
+.avatar-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SKill section dgn konsep css grid 4 kolom kartu */
+.skills{
+    padding: 80px 0;
+    border-top:1px solid var(--gunmetal);
+}
+
+.section-title{
+    font-family: var(--Syne);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.section-sub{
+    color: var(--gray-light);
+    margin-bottom: 48px;   
+}
+
+/* 4 Kolom otomatis??? minimal 200px /kolom */
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-card{
+    background: var(--lightdark);
+    border: 1px solid var(--gunmetal);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    transition: border-color var(--transisi), transform var(--transisi);
+}
+
+.skill-card:hover{
+    border-color: var(--offWhite);
+    transform: translateY(-4px);
+}
+
+.skill-card h3{
+    font-family: var(--Montserrat);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.skill-card p{
+    font-size: 13px;
+    color: var(--offWhite);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+/* Progress bar skill */
+/* .skill-bar {
+  height: 4px;
+  background: var(--clr-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent2));
+  border-radius: 4px;
+} */
+/* OPSIONAL BWT SKRG */
+
+
+
+/* RANDOM PAGES SECTION */
+.random-preview{
+    padding: 80px 0;
+    border-top: 1px solid var(--gunmetal);
+}
+
+.random-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.random-card{
+    background: var(--lightdark);
+    border: 1px solid var(--gunmetal);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color var(--transisi), transform var(--transisi);
+}
+
+.random-card:hover{
+    border-color: var(--strawberry-red);
+    transform: translateY(-4px);
+}
+
+.random-thumb{
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/9; /*RAsiO GAMBAR*/
+}
+
+.random-thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.random-card:hover .random-thumb img{
+    transform: scale(1.05);
+}
+
+.random-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgb(0, 0, 0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transisi);
+}
+
+.random-card:hover .random-overlay{ opacity: 1;}
+
+.random-info{
+   padding: 20px;
+}
+
+.random-tag{
+    font-size: 11px;
+    color: var(--sky-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.random-info h3{
+    font-family: var(--Montserrat);
+    font-size: 18px;
+    margin: 6px 0 8px;
+}
+
+.random-info p{
+    font-size: 13px;
+    color:var(--gray-light)
+}
+
+.section-cta{text-align: center;}
+
+/* CTA BANNER */
+.cta-banner{
+    border-top: 1px solid var(--gunmetal);
+    border-bottom: 1px solid var(--gunmetal);
+    padding: 64px 0;
+    background-color: var(--lightdark);
+}
+
+.cta-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.cta-inner h2 {
+    font-family: var(--Syne);
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.cta-inner p{ color: var(--white); margin-top: 4px;}
+
+/* FOOOTTTRGGGGhHhH */
+.site-footer{
+    padding: 60px 0 0;
+}
+
+.footer-inner{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--gunmetal);
+}
+
+
+/* .footer-brand .logo { margin-bottom: 12px; }
+.footer-brand p { color: var(--clr-muted); font-size: 14px; } */ n
+
+/* ==NGGAK PERLU SOALNYA REUSE LOGO YANG DIATAS== */
+
+.footer-links h4{
+    font-family: var(--Montserrat);
+    font-size: 14;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    color: var(--white);
+}
+
+.footer-links ul{display: flex; flex-direction: column; gap: 8px;}
+
+.footer-links li{
+    font-size: 14px;
+    color: var(--gray);
+    transition: color var(--transisi);    
+}
+
+.footer-links li:hover{ color: var(--offWhite);}
+
+.footer-bottom{
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: var(--gray);
+}
