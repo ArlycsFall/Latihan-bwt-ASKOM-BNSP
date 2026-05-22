@@ -30,7 +30,7 @@
     --transisi: 0.3s ease;
 
 --Syne:'Syne', sans-serif;
---TASA-Orbiter:'TASA Orbiter', sans-serif;
+--TASA-Orbiter:'TASA Orbiter Display', sans-serif;
 --Montserrat: 'Montserrat', sans-serif;
 }
 
@@ -468,7 +468,7 @@ flexbox horizontal logo kiri nav kanan*/
 
 .footer-links h4{
     font-family: var(--Montserrat);
-    font-size: 14;
+    font-size: 14px;
     letter-spacing: 0.5px;
     margin-bottom: 16px;
     color: var(--white);
