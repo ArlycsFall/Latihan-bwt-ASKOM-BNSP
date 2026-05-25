@@ -72,6 +72,14 @@ ul{list-style: none;}
     padding: 0 24px;
 }
 
+.note{
+    margin-top: 18px;
+    font-family: var(--Syne);
+    color: var(--gray);
+    text-align: end;
+    font-size: 12px;
+}
+
 /* buttonzz */
 .btn{
     display: inline-block;
@@ -316,8 +324,18 @@ flexbox horizontal logo kiri nav kanan*/
 
 .skill-card h3{
     font-family: var(--Montserrat);
+    text-transform: uppercase;
     font-size: 17px;
     margin-bottom: 8px;
+}
+
+.skill-card h5{
+    font-family: var(--Syne);
+    text-transform: capitalize;/* bisi lupa ngasih huruf besar diawal*/
+    font-size: 11px;
+    margin-top: 4px;
+    text-align: center;
+    color: var(--gray);
 }
 
 .skill-card p{
@@ -328,18 +346,18 @@ flexbox horizontal logo kiri nav kanan*/
 }
 
 /* Progress bar skill */
-/* .skill-bar {
+.skill-bar {
   height: 4px;
-  background: var(--clr-border);
+  background: var(--gunmetal);
   border-radius: 4px;
   overflow: hidden;
 }
 .skill-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent2));
+  background: linear-gradient(90deg, var(--strawberry-red), var(--electric-indigo));
   border-radius: 4px;
-} */
-/* OPSIONAL BWT SKRG */
+} 
+/* OPSIONAL BWT SKRG
 
 
 
@@ -462,7 +480,7 @@ flexbox horizontal logo kiri nav kanan*/
 
 
 /* .footer-brand .logo { margin-bottom: 12px; }
-.footer-brand p { color: var(--clr-muted); font-size: 14px; } */ n
+.footer-brand p { color: var(--clr-muted); font-size: 14px; } */ 
 
 /* ==NGGAK PERLU SOALNYA REUSE LOGO YANG DIATAS== */
 
