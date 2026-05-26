@@ -128,8 +128,8 @@ ul{list-style: none;}
 .btn-sm{
     padding: 8px 18px;
     font-size: 13px;
-    background:var(--strawberry-red);
-    color: var(--lightdark);
+    background:var(--offWhite);
+    color: var(--black);
     border-radius: var(--radius-sm);
 }
 
@@ -278,6 +278,11 @@ flexbox horizontal logo kiri nav kanan*/
     height: 99999px;
 }
 
+.avatar-wrap:hover{
+    rotate: 360deg;
+    transition: 2s;
+}
+
 .avatar-img{
     width: 100%;
     height: 100%;
@@ -383,7 +388,7 @@ flexbox horizontal logo kiri nav kanan*/
 }
 
 .random-card:hover{
-    border-color: var(--strawberry-red);
+    border-color: var(--offWhite);
     transform: translateY(-4px);
 }
 
